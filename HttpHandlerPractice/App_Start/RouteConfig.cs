@@ -12,6 +12,8 @@ namespace HttpHandlerPractice
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //避開所有.xyz的request
+            routes.IgnoreRoute("{resource}.xyz/{*pathInfo}");
 
             routes.MapRoute(
                 name: "Default",
